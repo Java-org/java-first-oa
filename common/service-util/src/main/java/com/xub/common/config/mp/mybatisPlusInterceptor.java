@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * 分页配置
  */
 
-@Configuration
 @MapperScan("com.xub.auth.mapper")
 public class mybatisPlusInterceptor {
     /**
