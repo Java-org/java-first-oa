@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xub.auth.service.SysUserService;
 import com.xub.common.result.Result;
+import com.xub.common.utils.MD5;
 import com.xub.model.system.SysUser;
 import com.xub.vo.system.SysUserQueryVo;
 import io.swagger.annotations.Api;
@@ -64,6 +65,9 @@ public class SysUserController {
     @ApiOperation(value = "保存用户")
     @PostMapping("save")
     public Result save(@RequestBody SysUser user) {
+        //MD5加密，不能解密
+        String passwordMD5 = MD5.encrypt(user.getPassword());
+        user.setPassword(passwordMD5);
         sysUserService.save(user);
         return Result.ok();
     }
@@ -79,6 +83,13 @@ public class SysUserController {
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
         sysUserService.removeById(id);
+        return Result.ok();
+    }
+
+    @ApiOperation(value = "更新状态")
+    @GetMapping("updateStatus/{id}/{status}")
+    public Result updateStatus(@PathVariable Long id, @PathVariable Integer status) {
+        sysUserService.updateStatus(id, status);
         return Result.ok();
     }
 }

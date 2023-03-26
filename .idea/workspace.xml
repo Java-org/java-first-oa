@@ -4,15 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04c09310-fe26-405f-bcbd-1e61f5ca5936" name="Default Changelist" comment="chapter 1 over">
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/model/system/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/SysUserQueryVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/SysUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysUserServiceImpl.java" afterDir="false" />
+    <list default="true" id="04c09310-fe26-405f-bcbd-1e61f5ca5936" name="Default Changelist" comment="user management">
+      <change afterPath="$PROJECT_DIR$/common/common-util/src/main/java/com/xub/common/jwt/JwtHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-util/src/main/java/com/xub/common/utils/MD5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/xub/common/exception/GuiguException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/model/system/SysMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/model/system/SysRoleMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/model/system/SysUserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/AssginMenuVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/AssginRoleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/LoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/MetaVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/src/main/java/com/xub/vo/system/RouterVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/SysMenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/SysRoleMenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/SysUserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/xml/SysMenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/xml/SysRoleMenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/xml/SysUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/mapper/xml/SysUserRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysMenuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysMenuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/utils/MenuHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/权限控制.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-oa/编译加载机制.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/service-util/src/main/java/com/xub/common/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/service-util/src/main/java/com/xub/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/java/com/xub/auth/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-oa/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-oa/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +90,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service-oa" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\java-first-oa\service-oa" />
+      <recent name="D:\java\java-first-oa\service-oa\src\main\java\com\xub\auth\mapper" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java\java-first-oa\common" />
     </key>
@@ -136,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678412486718</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="user management">
+      <created>1679190903861</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679190903861</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,7 +193,8 @@
     <MESSAGE value="condition configuration" />
     <MESSAGE value="service-controller-mapper" />
     <MESSAGE value="chapter 1 over" />
-    <option name="LAST_COMMIT_MESSAGE" value="chapter 1 over" />
+    <MESSAGE value="user management" />
+    <option name="LAST_COMMIT_MESSAGE" value="user management" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

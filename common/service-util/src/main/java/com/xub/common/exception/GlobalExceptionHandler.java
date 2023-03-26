@@ -1,4 +1,4 @@
-package com.xub.common.handler;
+package com.xub.common.exception;
 
 import com.xub.common.result.Result;
 import org.springframework.web.bind.annotation.ControllerAdvice;

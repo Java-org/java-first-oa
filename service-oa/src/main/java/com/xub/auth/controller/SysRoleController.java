@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xub.auth.service.SysRoleService;
 import com.xub.common.result.Result;
 import com.xub.model.system.SysRole;
+import com.xub.vo.system.AssginRoleVo;
 import com.xub.vo.system.SysRoleQueryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +17,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 访问时，格式为 http://localhost:8800/admin/system/sysRole/findAll
@@ -33,7 +35,6 @@ public class SysRoleController {
     @GetMapping("findAll")
     public Result<List<SysRole>> findAll(){
         List<SysRole> roleList = sysRoleService.list();
-        int i = 1 / 0;
         return Result.ok(roleList);
     }
 
@@ -92,6 +93,20 @@ public class SysRoleController {
     @DeleteMapping("batchRemove")
     public Result batchRemove(@RequestBody List<Long> idList) {
         sysRoleService.removeByIds(idList);
+        return Result.ok();
+    }
+
+    @ApiOperation(value = "根据用户获取角色数据")
+    @GetMapping("/toAssign/{userId}")
+    public Result toAssign(@PathVariable Long userId) {
+        Map<String, Object> roleMap = sysRoleService.findRoleByAdminId(userId);
+        return Result.ok(roleMap);
+    }
+
+    @ApiOperation(value = "根据用户分配角色")
+    @PostMapping("/doAssign")
+    public Result doAssign(@RequestBody AssginRoleVo assginRoleVo) {
+        sysRoleService.doAssign(assginRoleVo);
         return Result.ok();
     }
 }
