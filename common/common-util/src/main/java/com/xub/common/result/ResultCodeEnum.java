@@ -10,9 +10,10 @@ public enum ResultCodeEnum {
     //枚举的选项
     SUCCESS(200,"成功"),
     FAIL(201, "失败"),
-    LOGIN_ERROR(208,"认证失败"),
+    LOGIN_ERROR(204,"认证失败"),
     LOGIN_AUTH(208, "未登陆"),
-    PERMISSION(209, "没有权限");
+    PERMISSION(209, "没有权限"),
+    ACCOUNT_STOP(210, "账号停用");
 
     private Integer code;
     private String message;
